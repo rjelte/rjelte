@@ -1,0 +1,72 @@
+---
+title: "React: Basic Concepts"
+publishedAt: "2024-10-01"
+summary: "An introduction to React’s core concepts, designed to encourage beginners and seasoned developers to dive in and start building."
+tags: ["React", "Frontend", "JavaScript", "Web Development"]
+---
+
+## React: Basic Concepts
+
+As I'm constantly expanding my knowledge of new technologies while building out my personal website, I’ve found React to be one of the most powerful and flexible tools in web development. Whether you’re just starting out or looking to deepen your understanding, React provides the building blocks for creating dynamic, fast, and user-friendly interfaces. In this note, I’m capturing the **basic concepts of React** that I’ve learned along the way, so you too can build something awesome!
+
+### What is React?
+
+React is a **JavaScript library** developed by Facebook for building user interfaces, particularly single-page applications (SPAs). It allows you to break down complex UIs into smaller, reusable components, making development faster and easier to manage.
+
+### Key Concepts
+
+#### 1. **Component-Based Architecture**
+
+Everything in React revolves around **components**. Components are reusable chunks of UI that function independently. You can think of them as the building blocks of your application.
+
+**Example:**
+
+```jsx
+function Welcome() {
+  return <h1>Welcome to React!</h1>;
+}
+```
+
+Each component in React is isolated and reusable, making it easier to maintain and scale your application as it grows.
+
+#### 2. **State and Props**
+
+- **State** is how a component tracks its own data.
+- **Props** (short for properties) are how you pass data from one component to another.
+
+**Example:**
+
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+Here, `useState` creates a stateful variable `count`, and the button lets us update it.
+
+#### 3. **Hooks**
+
+Hooks were introduced to bring state and side effects into functional components. Common hooks include `useState` (for managing state) and `useEffect` (for side effects like data fetching).
+
+**Example:**
+
+```jsx
+useEffect(() => {
+  console.log("Component has mounted!");
+}, []);
+```
+
+This hook runs the `console.log` when the component mounts.
+
+### Build Something Today!
+
+React's flexibility can be overwhelming at first, but don’t let that stop you! The best way to learn is by doing. Start small: build a simple to-do list, explore the docs, and experiment with components and hooks. You’ll quickly find that React opens up countless possibilities for building fast and dynamic web applications.
+
+**So go ahead, sign up on a platform like GitHub, start a new React project, and share your thoughts or your code!** I’d love to see what you create—feel free to drop me a link, and let’s keep growing together!

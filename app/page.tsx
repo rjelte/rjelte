@@ -1,38 +1,103 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "app/components/posts";
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`Welcome to my personal portfolio site! This website is much more than a simple blog or a static landing page. It’s a place where I’ll be sharing my ongoing projects, tech-related discoveries, and ideas that excite me in the world of software engineering, learning and development, and Generative AI.`}
-      </p>
-      <p className="mb-4">
-        {`Unlike typical blog platforms, I built this site myself using cutting-edge tools like Next.js for the front-end, hosted on Vercel for smooth deployment. I'm using Supabase to handle my database, authentication, storage, and edge functions.`}
-      </p>
-      <p className="mb-4">
-        {`I'm constantly building and evolving this site, and aim to publish a new blog post at least once every week.`}
-      </p>
-      <div className="bg-teal-100 border border-teal-400 text-teal-700 px-4 py-3 rounded relative" role="alert">
-        <strong className="font-bold">Looking For Work!</strong>
-        <span className="block sm:inline"> Due to a reduction in force at my previous company, I'm actively searching for a new opportunity. Please check out <a
-            className="font-bold underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/rjelte/"
-          >
-            LinkedIN
-          </a> for my latest resume!</span>
+      <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56 px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-balance text-5xl font-semibold tracking-tight text-teal-500 sm:text-7xl">
+            Level Up Your Skills and Discover New Ones!
+          </h1>
+          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+            Whether you're a coder, a carpenter, or a chef,{" "}
+            <span className="bg-gradient-to-r from-teal-500 to-indigo-500 text-transparent bg-clip-text font-bold">
+              Upskill University
+            </span>{" "}
+            is a place where you can show off your projects, share thoughts
+            about your craft and spark ideas that will help you{" "}
+            <span className="italic">and others</span> level up.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              className="rounded-md bg-teal-800 hover:bg-gradient-to-r hover:from-teal-500 hover:to-indigo-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:ring-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Follow the Journey on our Blog
+            </a>
+            {/* <a
+              href="#"
+              className="rounded-md bg-orange-700 hover:bg-gradient-to-r hover:from-teal-500 hover:to-indigo-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:ring-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Explore Skills
+            </a> */}
+            <a
+              href="#"
+              className="rounded-md bg-gray-400 px-3.5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm cursor-not-allowed opacity-750"
+            >
+              Explore Projects and Skills <span aria-hidden="true">→</span>{" "}
+              (Coming Soon)
+            </a>
+          </div>
+        </div>
       </div>
-
-      <h2 className="mt-8 mb-4 text-xl font-semibold tracking-tighter">
-        {`Follow the adventure here:`}
-      </h2>
-      <div className="mb-8">
-        <BlogPosts />
+      <div className="w-full bg-gradient-to-r from-indigo-800 from-1% via-teal-700 via-50% to-teal-800  to-99% flex-auto py-20 rounded-xl">
+        <div className="flex justify-center">
+          <div className="w-64 mx-8 mb-12 text-center">
+            <p className="text-3xl mb-4">Looking for Work!</p>
+            <p className="">
+              I'm a coder, a dad, an improviser, and I make a mean garlic bread.
+            </p>
+            <p className="mt-4">
+              I have 10 years of experience creating awesome web and mobile
+              experiences as a Software Engineer. I also have a passion for
+              skills-based learning: I created a technologist onboarding
+              program, ultimately leading a global team of 5 to onboard 1,000+
+              New Hires with satisfaction scores over 95%.
+            </p>
+          </div>
+          <div className="w-64 mx-8 mb-12 ">
+            <img
+              className="rounded-3xl"
+              src="/images/rick-headshot-bw.jpeg"
+              alt="A rather flattering headshot of Rick Jelte"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center ">
+          <div className="relative  px-3 py-1 text-sm leading-6 ring-3 hover:ring-orange-700 ring-teal-500">
+            Download my latest resume{" "}
+            <a
+              href="/documents/Resume_RickJelte2024.pdf"
+              download="Resume_RickJelte2024"
+              className="font-semibold text-teal-400 hover:text-orange-600"
+            >
+              <span aria-hidden="true" className="absolute inset-0" />
+              Here <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
       </div>
+      {/* <button className="border-solid border-1 border-slate-200 bg-slate-900">
+        slate-900
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-teal-800">
+        teal-800
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-teal-500">
+        teal-500
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-orange-700">
+        orange-700
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-indigo-700">
+        indigo-600
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-slate-200 text-gray-700">
+        slate-200
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-white text-gray-700">
+        white
+      </button> */}
     </section>
-  )
+  );
 }
