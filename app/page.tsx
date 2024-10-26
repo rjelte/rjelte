@@ -8,7 +8,7 @@ export default function Page() {
           <h1 className="text-balance text-5xl font-semibold tracking-tight text-teal-500 sm:text-7xl">
             Level Up Your Skills and Discover New Ones!
           </h1>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+          <p className="mt-8 text-pretty text-lg font-medium text-gray-200 sm:text-xl/8">
             Whether you're a coder, a carpenter, or a chef,{" "}
             <span className="bg-gradient-to-r from-teal-500 to-indigo-500 text-transparent bg-clip-text font-bold">
               Upskill University
@@ -77,27 +77,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      {/* <button className="border-solid border-1 border-slate-200 bg-slate-900">
-        slate-900
-      </button>
-      <button className="border-solid border-1 border-slate-200 bg-teal-800">
-        teal-800
-      </button>
-      <button className="border-solid border-1 border-slate-200 bg-teal-500">
-        teal-500
-      </button>
-      <button className="border-solid border-1 border-slate-200 bg-orange-700">
-        orange-700
-      </button>
-      <button className="border-solid border-1 border-slate-200 bg-indigo-700">
-        indigo-600
-      </button>
-      <button className="border-solid border-1 border-slate-200 bg-slate-200 text-gray-700">
-        slate-200
-      </button>
-      <button className="border-solid border-1 border-slate-200 bg-white text-gray-700">
-        white
-      </button> */}
     </section>
   );
 }

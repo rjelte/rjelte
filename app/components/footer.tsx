@@ -18,6 +18,27 @@ function ArrowIcon() {
 export default function Footer() {
   return (
     <footer className="mb-16">
+      {/* <button className="border-solid border-1 border-slate-200 bg-slate-900">
+        slate-900
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-teal-800">
+        teal-800
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-teal-500">
+        teal-500
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-orange-700">
+        orange-700
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-indigo-700">
+        indigo-600
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-slate-200 text-gray-700">
+        slate-200
+      </button>
+      <button className="border-solid border-1 border-slate-200 bg-white text-gray-700">
+        white
+      </button> */}
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a

@@ -6,24 +6,51 @@ type Metadata = {
   publishedAt: string
   summary: string
   image?: string
+  tags?: string[]
 }
 
-function parseFrontmatter(fileContent: string) {
-  let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
-  let match = frontmatterRegex.exec(fileContent)
-  let frontMatterBlock = match![1]
-  let content = fileContent.replace(frontmatterRegex, '').trim()
-  let frontMatterLines = frontMatterBlock.trim().split('\n')
-  let metadata: Partial<Metadata> = {}
+function parseFrontmatter(fileContent: string): { metadata: Metadata; content: string } {
+  const frontmatterRegex = /---\s*([\s\S]*?)\s*---/
+  const match = frontmatterRegex.exec(fileContent)
+  
+  if (!match) {
+    throw new Error('No frontmatter found in content')
+  }
+
+  const frontMatterBlock = match[1]
+  const content = fileContent.replace(frontmatterRegex, '').trim()
+  const frontMatterLines = frontMatterBlock.trim().split('\n')
+  const metadata: Partial<Metadata> = {}
 
   frontMatterLines.forEach((line) => {
-    let [key, ...valueArr] = line.split(': ')
+    const [key, ...valueArr] = line.split(': ')
+    const trimmedKey = key.trim() as keyof Metadata
     let value = valueArr.join(': ').trim()
     value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value
+
+    if (trimmedKey === 'tags') {
+      // Handle tags specifically
+      const tagsArray = value
+        .replace(/[\[\]]/g, '') // Remove brackets
+        .split(',')
+        .map(tag => tag.trim())
+        .filter(tag => tag.length > 0)
+      metadata.tags = tagsArray
+    } else {
+      // Handle all other fields
+      metadata[trimmedKey] = value as Metadata[typeof trimmedKey]
+    }
   })
 
-  return { metadata: metadata as Metadata, content }
+  // Validate required fields
+  if (!metadata.title || !metadata.publishedAt || !metadata.summary) {
+    throw new Error('Missing required frontmatter fields')
+  }
+
+  return {
+    metadata: metadata as Metadata,
+    content
+  }
 }
 
 function getMDXFiles(dir) {
