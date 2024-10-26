@@ -19,7 +19,7 @@ export default function Page() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#"
+              href="/blog"
               className="rounded-md bg-teal-800 hover:bg-gradient-to-r hover:from-teal-500 hover:to-indigo-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:ring-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Follow the Journey on our Blog
