@@ -1,8 +1,11 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
 
 const UserDetail = () => {
   const router = useRouter();
-  const { username } = router.query; // Get the username from the URL
+  const searchParams = useSearchParams();
+  const username = searchParams.get("username");
 
   // Fetch user data based on username
 

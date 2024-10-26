@@ -1,8 +1,11 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
 
 const ProjectDetail = () => {
   const router = useRouter();
-  const { slug } = router.query;
+  const searchParams = useSearchParams();
+  const slug = searchParams.get("slug");
 
   // Fetch and render details of the project
   return (
