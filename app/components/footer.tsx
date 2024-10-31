@@ -17,7 +17,7 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-16">
+    <footer className="mb-12 lg:mb-16">
       {/* <button className="border-solid border-1 border-slate-200 bg-slate-900">
         slate-900
       </button>

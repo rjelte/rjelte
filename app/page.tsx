@@ -3,7 +3,7 @@ import { BlogPosts } from "app/components/posts";
 export default function Page() {
   return (
     <section>
-      <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56 px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl py-24 sm:py-48 lg:py-56 px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-balance text-5xl font-semibold tracking-tight text-teal-500 sm:text-7xl">
             Level Up Your Skills and Discover New Ones!
@@ -40,11 +40,16 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gradient-to-r from-indigo-800 from-1% via-teal-700 via-50% to-teal-800  to-99% flex-auto py-20 rounded-xl">
+      <div className="w-full bg-gradient-to-r from-indigo-800 from-1% via-teal-700 via-50% to-teal-800  to-99% flex-auto py-12 lg:py-20 rounded-xl">
         <div className="flex justify-center">
-          <div className="w-64 mx-8 mb-12 text-center">
+          <div className="w-64 mx-8 mb-8 lg:mb-12 lg:w-96 text-center lg:text-lg">
             <p className="text-3xl mb-4">Looking for Work!</p>
-            <p className="">
+            <img
+              className="md:hidden rounded-3xl mb-4"
+              src="/images/rick-headshot-bw.jpeg"
+              alt="A rather flattering headshot of Rick Jelte"
+            />
+            <p className="lg:mt-8">
               I'm a coder, a dad, an improviser, and I make a mean garlic bread.
             </p>
             <p className="mt-4">
@@ -55,7 +60,7 @@ export default function Page() {
               New Hires with satisfaction scores over 95%.
             </p>
           </div>
-          <div className="w-64 mx-8 mb-12 ">
+          <div className="w-96 lg:w-96 mx-8 mb-12 hidden md:block">
             <img
               className="rounded-3xl"
               src="/images/rick-headshot-bw.jpeg"
