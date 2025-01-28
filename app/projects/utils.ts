@@ -1,0 +1,52 @@
+// ToDo: Retrieve this data from Supabase
+const projectData = [
+    {
+        title: 'Upskill University Website',
+        slug: 'upskill-university-website',
+        date: '2024-10-08',
+        summary: 'This very website! (Pretty Meta if you ask me.) A demonstration Project to give you an ide of how Projects and Skills tie together.',
+        imageUrl: '/images/upskill-university-screenshot.png',
+        skills: ['React', 'Next.JS', 'Tailwind CSS', 'Web Design', 'Frontend', 'Supabase'],
+        body: `## Welcome to My Portfolio: A New Adventure in Tech!
+
+I’m excited to welcome you to my personal portfolio site! This website is much more than a simple blog or a static landing page. It’s a place where I’ll be sharing my ongoing projects, tech-related discoveries, and ideas that excite me in the world of programming and web development. Unlike typical blog platforms, **I built this site myself from scratch** using cutting-edge tools like Next.js for the front end and **hosted it on Vercel** for smooth deployment. On the backend, **I rely on Supabase** for database and authentication, making this a fully custom and robust project that I have full control over.
+
+### What You Will Find Here
+
+Right now, the site might seem a bit barebones, but there’s a lot more on the way! I’m in the middle of building out several exciting projects, many of which will either live here directly or be highlighted in upcoming posts. Whether it’s tackling a new programming language, exploring the latest in AI, or creating something fun with web technologies, there will always be something new to discover.
+
+But this isn’t just about me. I’m hoping to create a space where **everyone feels welcome**, no matter their skill level. Whether you're just starting out or you’ve been coding for years, you belong here. I want to inspire others to **try hard things**, break into new technologies, and feel empowered to grow at their own pace.
+
+### The Tech Stack
+
+To give you a quick behind-the-scenes tour, here’s what went into building this site:
+
+- **Frontend:** I chose **Next.js**, a powerful React framework that enables static and server-side rendering, perfect for a fast and dynamic site like this one. It’s a framework that gives you a lot of flexibility with very little configuration.
+- **Hosting:** I’m using **Vercel** to host the site because it integrates seamlessly with Next.js and provides automated deployments with every code change.
+- **Backend:** On the backend, I’m using **Supabase**, which provides a powerful and easy-to-use database with built-in authentication. This allows me to manage user accounts and future features (like saving projects or progress) with ease.
+
+### What's Coming Next
+
+There are some exciting updates in the pipeline that I can't wait to share with you! Here are three key things I’ll be working on soon:
+
+2. **Expanding Blog Functionality:** Soon, I’ll be adding the ability to embed video recordings directly into blog posts, making it easier for me to share tutorials, walkthroughs, and other multimedia content with you.
+3. **Community Engagement Tools:** I'm also planning to introduce tools that will allow **you, the community**, to engage and interact. Whether it’s through comments, discussions, or skill-sharing activities, the goal is to help you grow your own skills alongside me.
+
+### You Can Do This Too!
+
+If you’re reading this and thinking, “This seems out of my league,” let me tell you right now: **you can do this too**. Building your own portfolio site or starting that project you’ve been dreaming about doesn’t need to be intimidating. The tools and resources are out there, and if you’re willing to learn and push through the tough spots, you can create something amazing.
+
+This website, much like my career in tech, is a journey. It’s about **continuing to learn and grow**, and I want to encourage you to embrace that mindset too. Don't shy away from the new or unfamiliar. Jump in, get your hands dirty, and you'll be surprised at how far you can go!
+
+Whether you’re a fellow developer, a tech enthusiast, or just curious about coding, I hope you’ll stick around. Let’s learn, build, and create something awesome together. I’ll be sharing more updates and projects soon, so stay tuned!
+
+---
+
+**In Summary:**  
+This site is a place for exploration, learning, and growth. I’m excited for what’s to come, and I encourage you to start that next big project, no matter how intimidating it might seem. If I can build this, so can you! Let’s get started!`
+      }
+]
+
+export function getProjects() {
+    return projectData;
+  }

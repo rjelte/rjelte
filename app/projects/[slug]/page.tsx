@@ -11,6 +11,7 @@ const ProjectDetail = () => {
   return (
     <div>
       <h1>Project Detail: {slug}</h1>
+      <h3>Coming soon!!</h3>
       {/* Project details here */}
     </div>
   );
