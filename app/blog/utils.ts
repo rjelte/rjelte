@@ -81,6 +81,7 @@ export function getBlogPosts() {
 }
 
 export function formatDate(date: string, includeRelative = false) {
+  console.log("- - - Date: " + date);
   let currentDate = new Date()
   if (!date.includes('T')) {
     date = `${date}T00:00:00`
